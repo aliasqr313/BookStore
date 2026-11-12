@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - کتاب‌فروشی</title>
+    <link href="~/css/styles.css" rel="stylesheet" asp-append-version="true" />
+    
+</head>
+<body>
+    <div style="font-family: Bykan;">
+
+        <nav class="nav">
+            <div class="mobileNav hidden">
+                <i id="myNavBtn" class="fa fa-bars"></i>
+                <a> LOGO </a>
+            </div>
+
+            <div id="desktopNav" class="navbar">
+                <a class="atext" asp-page="/Index"> خانه </a>
+                <a class="atext" asp-page="/Books"> محصولات </a>
+                <a class="atext" asp-page="/About"> درباره ما </a>
+                <a class="atext" asp-page="/Account/Login"> ورود </a>
+                <a> LOGO </a>
+            </div>
+        </nav>
+
+        @RenderBody()
+
+        <footer>
+            <div class="about-us">
+                <h3>درباره ما</h3>
+                <p>کلبه کتاب، فروشگاه آنلاین کتاب برای همه کتاب‌خوان‌ها.</p>
+            </div>
+            <div class="important-links">
+                <h3>لینک‌های مهم</h3>
+                <ul>
+                    <li><a asp-page="/Index">خانه</a></li>
+                    <li><a asp-page="/Books">محصولات</a></li>
+                    <li><a asp-page="/About">درباره ما</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <h3>ما را دنبال کنید</h3>
+                <div class="icons">
+                    <a href="#"><img src="~/img/8726504_telegram_icon.svg" alt="telegram" /></a>
+                    <a href="#"><img src="~/img/1298747_instagram_brand_logo_social media_icon.svg" alt="instagram" /></a>
+                    <a href="#"><img src="~/img/294709_circle_twitter_icon.svg" alt="twitter" /></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/js/scripts.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
